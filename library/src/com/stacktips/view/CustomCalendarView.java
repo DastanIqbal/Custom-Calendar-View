@@ -410,7 +410,6 @@ public class CustomCalendarView extends LinearLayout {
             calendar.setFirstDayOfWeek(getFirstDayOfWeek());
             calendar.setTime(currentCalendar.getTime());
             calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(dayOfMonthText.getText().toString()));
-            markDayAsSelectedDay(calendar.getTime());
 
             if (calendarListener != null)
                 calendarListener.onDateSelected(calendar.getTime());
