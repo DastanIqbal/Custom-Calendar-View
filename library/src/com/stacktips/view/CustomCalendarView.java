@@ -68,6 +68,7 @@ public class CustomCalendarView extends LinearLayout {
 
     private int currentMonthIndex = 0;
     private boolean isOverflowDateVisible = true;
+    private boolean isOnClickCustom = false;
 
     public CustomCalendarView(Context mContext) {
         this(mContext, null);
@@ -245,6 +246,8 @@ public class CustomCalendarView extends LinearLayout {
                     else if (i >= 36 && ((float) monthEndIndex / 7.0f) >= 1) {
                         dayView.setVisibility(View.GONE);
                     }
+                } else {
+                    dayOfMonthContainer.setOnClickListener(onDayOfMonthClickListener);
                 }
             }
             dayView.decorate();
@@ -393,24 +396,26 @@ public class CustomCalendarView extends LinearLayout {
     private OnClickListener onDayOfMonthClickListener = new OnClickListener() {
         @Override
         public void onClick(View view) {
-            // Extract day selected
-            ViewGroup dayOfMonthContainer = (ViewGroup) view;
-            String tagId = (String) dayOfMonthContainer.getTag();
-            tagId = tagId.substring(DAY_OF_MONTH_CONTAINER.length(), tagId.length());
-            final TextView dayOfMonthText = (TextView) view.findViewWithTag(DAY_OF_MONTH_TEXT + tagId);
+            if(!isOnClickCustom()) {
+                // Extract day selected
+                ViewGroup dayOfMonthContainer = (ViewGroup) view;
+                String tagId = (String) dayOfMonthContainer.getTag();
+                tagId = tagId.substring(DAY_OF_MONTH_CONTAINER.length(), tagId.length());
+                final TextView dayOfMonthText = (TextView) view.findViewWithTag(DAY_OF_MONTH_TEXT + tagId);
 
-            // Fire event
-            final Calendar calendar = Calendar.getInstance();
-            calendar.setFirstDayOfWeek(getFirstDayOfWeek());
-            calendar.setTime(currentCalendar.getTime());
-            calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(dayOfMonthText.getText().toString()));
-            markDayAsSelectedDay(calendar.getTime());
+                // Fire event
+                final Calendar calendar = Calendar.getInstance();
+                calendar.setFirstDayOfWeek(getFirstDayOfWeek());
+                calendar.setTime(currentCalendar.getTime());
+                calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(dayOfMonthText.getText().toString()));
+                markDayAsSelectedDay(calendar.getTime());
 
-            //Set the current day color
-            markDayAsCurrentDay(currentCalendar);
+                //Set the current day color
+                markDayAsCurrentDay(currentCalendar);
 
-            if (calendarListener != null)
-                calendarListener.onDateSelected(calendar.getTime());
+                if (calendarListener != null)
+                    calendarListener.onDateSelected(calendar.getTime());
+            }
         }
     };
 
@@ -429,6 +434,10 @@ public class CustomCalendarView extends LinearLayout {
     public void setShowOverflowDate(boolean isOverFlowEnabled) {
         isOverflowDateVisible = isOverFlowEnabled;
     }
+
+    public boolean isOnClickCustom() {return isOnClickCustom;}
+
+    public void setOnClickCustom(boolean isOnClickCustomEnabled) {isOnClickCustom = isOnClickCustomEnabled;}
 
     public void setCustomTypeface(Typeface customTypeface) {
         this.customTypeface = customTypeface;
