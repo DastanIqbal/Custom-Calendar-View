@@ -75,7 +75,7 @@
         <com.stacktips.view.DayView
             style="@style/CalendarView.DayOfTheMonth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:tag="dayOfMonthText4"

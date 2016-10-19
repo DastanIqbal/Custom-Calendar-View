@@ -53,7 +53,7 @@ public class SimpleCalendarActivity extends AppCompatActivity {
         calendarView.setFirstDayOfWeek(Calendar.MONDAY);
 
         //Show/hide overflow days of a month
-        calendarView.setShowOverflowDate(false);
+        calendarView.setShowOverflowDate(true);
 
         //call refreshCalendar to update calendar the view
         calendarView.refreshCalendar(currentCalendar);

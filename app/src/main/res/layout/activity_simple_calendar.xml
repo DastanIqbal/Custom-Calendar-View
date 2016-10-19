@@ -34,5 +34,6 @@
         app:disabledDayTextColor="@color/grey"
         app:selectedDayBackgroundColor="@color/blue"
         app:titleLayoutBackgroundColor="@color/white"
-        app:weekLayoutBackgroundColor="@color/white"/>
+        app:weekLayoutBackgroundColor="@color/white"
+        />
 </LinearLayout>

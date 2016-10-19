@@ -5,6 +5,7 @@
         <attr name="calendarTitleTextColor" format="color" />
         <attr name="dayOfWeekTextColor" format="color" />
         <attr name="dayOfMonthTextColor" format="color" />
+        <attr name="dayOfMonthBackgroundTextColor" format="color" />
         <attr name="calendarBackgroundColor" format="color" />
         <attr name="disabledDayBackgroundColor" format="color" />
         <attr name="disabledDayTextColor" format="color" />
