@@ -249,6 +249,8 @@ public class CustomCalendarView extends LinearLayout {
                     else if (i >= 36 && ((float) monthEndIndex / 7.0f) >= 1) {
                         dayView.setVisibility(View.GONE);
                     }
+                } else {
+                    dayOfMonthContainer.setOnClickListener(onDayOfMonthClickListener);
                 }
             }
             dayView.decorate();
@@ -409,9 +411,6 @@ public class CustomCalendarView extends LinearLayout {
             calendar.setTime(currentCalendar.getTime());
             calendar.set(Calendar.DAY_OF_MONTH, Integer.valueOf(dayOfMonthText.getText().toString()));
             markDayAsSelectedDay(calendar.getTime());
-
-            //Set the current day color
-            markDayAsCurrentDay(currentCalendar);
 
             if (calendarListener != null)
                 calendarListener.onDateSelected(calendar.getTime());
