@@ -95,7 +95,7 @@ public class CustomCalendarView extends LinearLayout {
         weekLayoutBackgroundColor = typedArray.getColor(R.styleable.CustomCalendarView_weekLayoutBackgroundColor, getResources().getColor(R.color.white));
         dayOfWeekTextColor = typedArray.getColor(R.styleable.CustomCalendarView_dayOfWeekTextColor, getResources().getColor(R.color.black));
         dayOfMonthTextColor = typedArray.getColor(R.styleable.CustomCalendarView_dayOfMonthTextColor, getResources().getColor(R.color.black));
-        dayOfMonthBackgroundColor = typedArray.getColor(R.styleable.CustomCalendarView_dayOfMonthBackgroundTextColor, getResources().getColor(R.color.white));
+        dayOfMonthBackgroundColor = typedArray.getColor(R.styleable.CustomCalendarView_dayOfMonthBackgroundColor, getResources().getColor(R.color.white));
         disabledDayBackgroundColor = typedArray.getColor(R.styleable.CustomCalendarView_disabledDayBackgroundColor, getResources().getColor(R.color.day_disabled_background_color));
         disabledDayTextColor = typedArray.getColor(R.styleable.CustomCalendarView_disabledDayTextColor, getResources().getColor(R.color.day_disabled_text_color));
         selectedDayBackground = typedArray.getColor(R.styleable.CustomCalendarView_selectedDayBackgroundColor, getResources().getColor(R.color.selected_day_background));
@@ -239,10 +239,12 @@ public class CustomCalendarView extends LinearLayout {
                 dayView.setBackgroundColor(disabledDayBackgroundColor);
                 dayView.setTextColor(disabledDayTextColor);
 
-                if (!isOverflowDateVisible())
-                    dayView.setVisibility(View.GONE);
-                else if (i >= 36 && ((float) monthEndIndex / 7.0f) >= 1) {
-                    dayView.setVisibility(View.GONE);
+                if(!CalendarUtils.isSameMonth(calendar, startCalendar)){
+                    if (!isOverflowDateVisible())
+                        dayView.setVisibility(View.GONE);
+                    else if (i >= 36 && ((float) monthEndIndex / 7.0f) >= 1) {
+                        dayView.setVisibility(View.GONE);
+                    }
                 }
             }
             dayView.decorate();

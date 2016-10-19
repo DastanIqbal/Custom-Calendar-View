@@ -29,6 +29,7 @@
         app:calendarTitleTextColor="@color/black"
         app:currentDayOfMonthColor="@color/blue"
         app:dayOfMonthTextColor="@color/black"
+        app:dayOfMonthBackgroundColor="@color/white"
         app:dayOfWeekTextColor="@color/black"
         app:disabledDayBackgroundColor="@color/off_white"
         app:disabledDayTextColor="@color/grey"
