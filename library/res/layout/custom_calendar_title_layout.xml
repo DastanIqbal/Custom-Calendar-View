@@ -25,7 +25,7 @@
         android:layout_alignParentTop="false"
         android:layout_centerInParent="true"
         android:tag="dateTitle"
-        android:text="MONTH 2014"
+        android:text="MONTH"
         android:textAllCaps="true" />
 
     <ImageView
