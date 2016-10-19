@@ -17,7 +17,7 @@
         <com.stacktips.view.DayView
             style="@style/CalendarView.DayOfTheMonth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:tag="dayOfMonthText1"
@@ -36,7 +36,7 @@
         <com.stacktips.view.DayView
             style="@style/CalendarView.DayOfTheMonth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:tag="dayOfMonthText2"
@@ -56,7 +56,7 @@
         <com.stacktips.view.DayView
             style="@style/CalendarView.DayOfTheMonth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:tag="dayOfMonthText3"
@@ -93,7 +93,7 @@
         <com.stacktips.view.DayView
             style="@style/CalendarView.DayOfTheMonth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:tag="dayOfMonthText5"
@@ -111,7 +111,7 @@
         <com.stacktips.view.DayView
             style="@style/CalendarView.DayOfTheMonth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:tag="dayOfMonthText6"
@@ -129,7 +129,7 @@
         <com.stacktips.view.DayView
             style="@style/CalendarView.DayOfTheMonth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:tag="dayOfMonthText7"
