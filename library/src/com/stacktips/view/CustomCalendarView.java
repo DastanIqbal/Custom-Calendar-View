@@ -40,6 +40,7 @@ public class CustomCalendarView extends LinearLayout {
     private View view;
     private ImageView previousMonthButton;
     private ImageView nextMonthButton;
+    private LinearLayout daysContainer;
     private CalendarListener calendarListener;
     private Calendar currentCalendar;
     private Locale locale;
@@ -137,6 +138,9 @@ public class CustomCalendarView extends LinearLayout {
                 }
             }
         });
+
+        daysContainer = (LinearLayout) view.findViewById(R.id.daysContainer);
+        daysContainer.setBackgroundColor(calendarBackgroundColor);
 
         // Initialize calendar for current month
         Locale locale = mContext.getResources().getConfiguration().locale;
