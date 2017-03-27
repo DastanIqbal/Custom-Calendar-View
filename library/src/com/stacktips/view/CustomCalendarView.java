@@ -34,6 +34,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class CustomCalendarView extends LinearLayout {
     private Context mContext;
@@ -343,8 +344,20 @@ public class CustomCalendarView extends LinearLayout {
     @SuppressLint("DefaultLocale")
     public void refreshCalendar(Calendar currentCalendar) {
         this.currentCalendar = currentCalendar;
-        this.currentCalendar.setFirstDayOfWeek(getFirstDayOfWeek());
         locale = mContext.getResources().getConfiguration().locale;
+
+
+        Calendar now = Calendar.getInstance(locale);
+
+        if(now.get(Calendar.MONTH) == currentCalendar.get(Calendar.MONTH)) {
+            previousMonthButton.setVisibility(INVISIBLE);
+            previousMonthButton.setEnabled(false);
+        } else {
+            previousMonthButton.setVisibility(VISIBLE);
+            previousMonthButton.setEnabled(true);
+        }
+
+        this.currentCalendar.setFirstDayOfWeek(getFirstDayOfWeek());
 
         // Set date title
         initializeTitleLayout();
