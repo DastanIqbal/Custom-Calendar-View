@@ -349,7 +349,7 @@ public class CustomCalendarView extends LinearLayout {
 
         Calendar now = Calendar.getInstance(locale);
 
-        if(now.get(Calendar.MONTH) == currentCalendar.get(Calendar.MONTH)) {
+        if(now.get(Calendar.YEAR) == currentCalendar.get(Calendar.YEAR) && now.get(Calendar.MONTH) == currentCalendar.get(Calendar.MONTH)) {
             previousMonthButton.setVisibility(INVISIBLE);
             previousMonthButton.setEnabled(false);
         } else {
