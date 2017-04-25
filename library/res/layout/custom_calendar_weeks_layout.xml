@@ -12,41 +12,48 @@
         style="@style/CalendarView.DayOfTheWeek"
         android:layout_weight="1"
         android:tag="dayOfWeek1"
-        android:text="SUN" />
+        android:text="SUN"
+        android:textAllCaps="true" />
 
     <TextView
         style="@style/CalendarView.DayOfTheWeek"
         android:layout_weight="1"
         android:tag="dayOfWeek2"
-        android:text="MON" />
+        android:text="MON"
+        android:textAllCaps="true" />
 
     <TextView
         style="@style/CalendarView.DayOfTheWeek"
         android:layout_weight="1"
         android:tag="dayOfWeek3"
-        android:text="TUE" />
+        android:text="TUE"
+        android:textAllCaps="true" />
 
     <TextView
         style="@style/CalendarView.DayOfTheWeek"
         android:layout_weight="1"
         android:tag="dayOfWeek4"
-        android:text="WED" />
+        android:text="WED"
+        android:textAllCaps="true" />
 
     <TextView
         style="@style/CalendarView.DayOfTheWeek"
         android:layout_weight="1"
         android:tag="dayOfWeek5"
-        android:text="THU" />
+        android:text="THU"
+        android:textAllCaps="true" />
 
     <TextView
         style="@style/CalendarView.DayOfTheWeek"
         android:layout_weight="1"
         android:tag="dayOfWeek6"
-        android:text="FRI" />
+        android:text="FRI"
+        android:textAllCaps="true" />
 
     <TextView
         style="@style/CalendarView.DayOfTheWeek"
         android:layout_weight="1"
         android:tag="dayOfWeek7"
-        android:text="SAT" />
+        android:text="SAT"
+        android:textAllCaps="true" />
 </LinearLayout>
